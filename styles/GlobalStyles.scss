@@ -1,0 +1,69 @@
+:root {
+  --primary: #0a0a0a;
+  --primary-dark: #141414;
+  --primary-light: #1f0a0a;
+  --secondary: #dc2626;
+  --tertiary: #ffffff;
+  --tertiary-dark: #a3a3a3;
+  --light: 300;
+  --medium: 400;
+  --bold: 500;
+  --bolder: 600;
+  --card-bg: #141414;
+  --card-text: #dc2626;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+
+  @media screen and (min-width: 800px) {
+    cursor: none !important;
+  }
+}
+
+html {
+  user-select: none;
+  font-size: 62.5%;
+  height: 100%;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 58%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 50%;
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-weight: var(--medium);
+  font-size: 2rem;
+  color: var(--tertiary);
+  background: var(--primary);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+input,
+textarea,
+button,
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#141414"/>
+  <rect x="40" y="40" width="720" height="420" rx="8" stroke="#dc2626" stroke-width="2" fill="#0a0a0a"/>
+  <circle cx="400" cy="200" r="80" stroke="#dc2626" stroke-width="2" fill="#1f0a0a"/>
+  <path d="M370 200 Q400 160 430 200 Q400 240 370 200" fill="#dc2626" opacity="0.6"/>
+  <rect x="200" y="320" width="120" height="60" rx="8" fill="#1f0a0a" stroke="#dc2626" stroke-width="1"/>
+  <rect x="340" y="320" width="120" height="60" rx="8" fill="#1f0a0a" stroke="#dc2626" stroke-width="1"/>
+  <rect x="480" y="320" width="120" height="60" rx="8" fill="#1f0a0a" stroke="#dc2626" stroke-width="1"/>
+  <text x="400" y="420" text-anchor="middle" fill="#a3a3a3" font-size="20" font-family="sans-serif">Weather Dashboard</text>
+</svg>
