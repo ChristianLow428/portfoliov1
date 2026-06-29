@@ -5,7 +5,9 @@ export const heroData = {
   expertise: ["Software Engineer", "Web Developer"],
   about:
     "I'm a developer focused on building clean, performant web experiences. I enjoy turning complex problems into solutions and am always exploring new technologies and gain new experiences.",
+    
   btnText: "My resume",
+  url: "https://docs.google.com/document/d/1b1nZi-GS9kMXV7sSBrufLtYiNCRJqeaf/edit"
 };
 
 export const aboutData = {
@@ -53,7 +55,7 @@ export const SkillsData = {
 };
 
 export const contactData = {
-  title: "Want To",
+  title: "Looking to?",
   cards: [
     {
       title: "offer job opportunity?",
@@ -83,7 +85,7 @@ export const contactData = {
     },
     {
       label: "Resume",
-      url: "/Docs/resume.pdf",
+      url: "https://docs.google.com/document/d/1b1nZi-GS9kMXV7sSBrufLtYiNCRJqeaf/edit",
     },
   ],
 };
@@ -92,13 +94,13 @@ export const ProjectsData = {
   title: "Projects",
   Projects: [
     {
-      name: "Portfolio v1",
-      image: "/images/project-1.svg",
+      name: "808Ultimatewesbite",
+      image: "/images/808Ultimate.png",
       technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
       description:
-        "A personal portfolio website built with Next.js and a custom black-and-red design system. Features smooth scroll navigation, animated sections, and a responsive layout.",
-      demoUrl: "#",
-      codeUrl: "https://github.com",
+        "Developed a high-performance regional tracking platform featuring live start.gg tournament integrations and an internal data-caching API. Finding Top Hawaii Super Smash Bros Ultimate Players, along with Tournaments happening around the State.",
+      demoUrl: "https://808ultimatewebsite-w1az.vercel.app/",
+      codeUrl: "https://github.com/ChristianLow428/808ultimatewebsite",
     },
     {
       name: "Manoa Compass",
@@ -106,7 +108,7 @@ export const ProjectsData = {
       technologies: ["React", "TypeScript", "Firebase"],
       description:
         "An MVP designed to help students navigate the University of Hawaii at Manoa campus clubs and give information about them powered by Gemini API ",
-      demoUrl: "https://manoa-compass-code-theta.vercel.app/",
+      demoUrl: "https://808ultimatewebsite-w1az.vercel.app/",
       codeUrl: "https://manoa-compass.github.io/",
     },
     {
