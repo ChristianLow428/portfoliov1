@@ -49,7 +49,7 @@ export const SkillsData = {
     },
     {
       title: "Tools & Other",
-      skills: ["Git", "Node.js", "Vercel", "Firebase"],
+      skills: ["Git", "Node.js", "Vercel", "Firebase", "Supabase, Discord API"],
     },
   ],
 };
@@ -96,29 +96,29 @@ export const ProjectsData = {
     {
       name: "808Ultimatewesbite",
       image: "/images/808Ultimate.png",
-      technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+      technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Start.gg API"],
       description:
         "Developed a high-performance regional tracking platform featuring live start.gg tournament integrations and an internal data-caching API. Finding Top Hawaii Super Smash Bros Ultimate Players, along with Tournaments happening around the State.",
       demoUrl: "https://808ultimatewebsite-w1az.vercel.app/",
       codeUrl: "https://github.com/ChristianLow428/808ultimatewebsite",
     },
     {
+      name: "Smash Ultimate Matchmaker",
+      image: "/images/Hawaiissbu.png",
+      technologies: ["React", "TypeScript", "Firebase, Gemini AI", "Discord API"],
+      description:
+        "Developed a full-stack, real-time matchmaking platform modeled after Smashmate.com, enabling users to find and challenge opponents instantly. ",
+      demoUrl: "https://drive.google.com/file/d/1Vz3FarxMuWI8Bkg2XBXP-x_8mpxAGuaW/view?usp=sharing",
+      codeUrl: "https://github.com/ChristianLow428/Smashmateclone",
+    },
+    {
       name: "Manoa Compass",
       image: "/images/ManoaCompass.png",
-      technologies: ["React", "TypeScript", "Firebase, Gemini AI"],
+      technologies: ["JavaScript", "REST APIs", "CSS"],
       description:
         "An MVP designed to help students navigate the University of Hawaii at Manoa campus clubs and give information about them powered by Gemini API ",
       demoUrl: "https://808ultimatewebsite-w1az.vercel.app/",
       codeUrl: "https://manoa-compass.github.io/",
-    },
-    {
-      name: "Weather Dashboard",
-      image: "/images/project-3.svg",
-      technologies: ["JavaScript", "REST APIs", "CSS"],
-      description:
-        "A weather dashboard that displays current conditions and forecasts using a third-party API, with location search and a responsive card-based layout.",
-      demoUrl: "#",
-      codeUrl: "https://github.com",
     },
   ],
 };
