@@ -105,7 +105,7 @@ export const ProjectsData = {
     {
       name: "Manoa Compass",
       image: "/images/ManoaCompass.png",
-      technologies: ["React", "TypeScript", "Firebase"],
+      technologies: ["React", "TypeScript", "Firebase, Gemini AI"],
       description:
         "An MVP designed to help students navigate the University of Hawaii at Manoa campus clubs and give information about them powered by Gemini API ",
       demoUrl: "https://808ultimatewebsite-w1az.vercel.app/",
