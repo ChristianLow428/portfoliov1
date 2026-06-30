@@ -12,7 +12,7 @@ type ProjectData = {
   description: string;
   demoUrl: string;
   codeUrl: string;
-  documentationUrl: string;
+  documentationUrl?: string;
 };
 
 type ProjectProps = {
