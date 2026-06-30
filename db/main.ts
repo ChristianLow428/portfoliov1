@@ -49,7 +49,7 @@ export const SkillsData = {
     },
     {
       title: "Tools & Other",
-      skills: ["Git", "Node.js", "Vercel", "Firebase", "Supabase, Discord API"],
+      skills: ["Git", "Node.js", "Vercel", "Firebase", "Supabase", "Discord API"],
     },
   ],
 };
@@ -117,7 +117,7 @@ export const ProjectsData = {
       technologies: ["JavaScript", "REST APIs", "CSS"],
       description:
         "An MVP designed to help students navigate the University of Hawaii at Manoa campus clubs and give information about them powered by Gemini API ",
-      demoUrl: "https://808ultimatewebsite-w1az.vercel.app/",
+      demoUrl: "https://manoa-compass-code.vercel.app/",
       codeUrl: "https://manoa-compass.github.io/",
     },
   ],
