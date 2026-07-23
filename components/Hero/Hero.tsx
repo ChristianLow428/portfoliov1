@@ -103,7 +103,7 @@ export default function Hero() {
             </motion.span>
           </div>
           <motion.a
-            href="/Docs/resume.pdf"
+            href={heroData.url}
             target="_blank"
             variants={textChildrenVariants}
             whileHover={{
