@@ -7,7 +7,7 @@ export const heroData = {
     "I'm a developer focused on building clean, performant web experiences. I enjoy turning complex problems into solutions and am always exploring new technologies and gain new experiences.",
     
   btnText: "My resume",
-  url: "https://docs.google.com/document/d/1b1nZi-GS9kMXV7sSBrufLtYiNCRJqeaf/edit"
+  url: "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit"
 };
 
 export const aboutData = {
@@ -85,7 +85,7 @@ export const contactData = {
     },
     {
       label: "Resume",
-      url: "https://docs.google.com/document/d/1b1nZi-GS9kMXV7sSBrufLtYiNCRJqeaf/edit",
+      url: "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit",
     },
   ],
 };
