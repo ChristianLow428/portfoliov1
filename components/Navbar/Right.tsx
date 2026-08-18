@@ -72,13 +72,18 @@ export default function Right({ mobile }: RightProps) {
           </motion.li>
         ))}
         <motion.li
-          variants={itemVariants}
-          className={styles.navbar_right_list_item}
-        >
-          <a href="/Docs/resume.pdf" target="_blank" onClick={closeNav}>
-            Resume
-          </a>
-        </motion.li>
+  variants={itemVariants}
+  className={styles.navbar_right_list_item}
+>
+  <a 
+    href="https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    onClick={closeNav}
+  >
+    Resume
+  </a>
+</motion.li>
       </motion.ul>
 
       {mobile && (
