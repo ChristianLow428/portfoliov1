@@ -28,15 +28,17 @@ const itemVariants: Variants = {
 export default function Right({ mobile }: RightProps) {
   const { navState, closeNav } = useNav();
 
+  // Prevent background scrolling cleanly when mobile nav is open
   useEffect(() => {
-    const stopScroll = () => {
-      if (mobile && navState.open) {
-        window.scrollTo(0, 0);
-      }
-    };
+    if (mobile && navState.open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-    window.addEventListener("scroll", stopScroll);
-    return () => window.removeEventListener("scroll", stopScroll);
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [navState.open, mobile]);
 
   const navLinks = [
@@ -45,6 +47,10 @@ export default function Right({ mobile }: RightProps) {
     { label: "Projects", to: "projects" },
     { label: "Contact", to: "contact" },
   ];
+
+  const handleResumeClick = () => {
+    closeNav();
+  };
 
   return (
     <>
@@ -72,18 +78,18 @@ export default function Right({ mobile }: RightProps) {
           </motion.li>
         ))}
         <motion.li
-  variants={itemVariants}
-  className={styles.navbar_right_list_item}
->
-  <a 
-    href="https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    onClick={closeNav}
-  >
-    Resume
-  </a>
-</motion.li>
+          variants={itemVariants}
+          className={styles.navbar_right_list_item}
+        >
+          <a
+            href="https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleResumeClick}
+          >
+            Resume
+          </a>
+        </motion.li>
       </motion.ul>
 
       {mobile && (
@@ -94,6 +100,7 @@ export default function Right({ mobile }: RightProps) {
               className={styles.navbar_right_links_container_link}
               href={contactData.links[1].url}
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="github"
             >
               <Icon icon="mdi:github" />
@@ -102,6 +109,7 @@ export default function Right({ mobile }: RightProps) {
               className={styles.navbar_right_links_container_link}
               href={contactData.links[2].url}
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="linkedin"
             >
               <Icon icon="mdi:linkedin" />
@@ -110,6 +118,7 @@ export default function Right({ mobile }: RightProps) {
               className={styles.navbar_right_links_container_link}
               href={contactData.links[0].url}
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="email"
             >
               <Icon icon="mi:email" />
