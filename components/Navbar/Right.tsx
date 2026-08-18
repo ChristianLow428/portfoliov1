@@ -40,18 +40,21 @@ export default function Right({ mobile }: RightProps) {
     };
   }, [navState.open, mobile]);
 
-  // Unified nav links array including both internal scroll links and external links
   const navLinks = [
     { label: "About", to: "about", isExternal: false },
     { label: "Skills", to: "skills", isExternal: false },
     { label: "Projects", to: "projects", isExternal: false },
     { label: "Contact", to: "contact", isExternal: false },
-    {
-      label: "Resume",
-      url: "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit",
-      isExternal: true,
-    },
   ];
+
+  const resumeUrl =
+    "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit";
+
+  const handleExternalClick = (url: string) => {
+    // Open tab immediately to preserve user-initiated browser gesture
+    window.open(url, "_blank", "noopener,noreferrer");
+    closeNav();
+  };
 
   return (
     <>
@@ -66,29 +69,39 @@ export default function Right({ mobile }: RightProps) {
             key={link.label}
             className={styles.navbar_right_list_item}
           >
-            {link.isExternal ? (
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeNav}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                onClick={closeNav}
-                to={link.to!}
-                href={link.to}
-                smooth
-                duration={600}
-                offset={50}
-              >
-                {link.label}
-              </Link>
-            )}
+            <Link
+              onClick={closeNav}
+              to={link.to}
+              href={link.to}
+              smooth
+              duration={600}
+              offset={50}
+            >
+              {link.label}
+            </Link>
           </motion.li>
         ))}
+
+        {/* Separate external Resume item entirely out of react-scroll flow */}
+        <motion.li
+          variants={itemVariants}
+          className={styles.navbar_right_list_item}
+        >
+          <button
+            type="button"
+            onClick={() => handleExternalClick(resumeUrl)}
+            style={{
+              background: "none",
+              border: "none",
+              padding: 0,
+              font: "inherit",
+              color: "inherit",
+              cursor: "pointer",
+            }}
+          >
+            Resume
+          </button>
+        </motion.li>
       </motion.ul>
 
       {mobile && (
