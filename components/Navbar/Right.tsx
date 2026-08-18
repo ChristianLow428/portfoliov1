@@ -28,7 +28,6 @@ const itemVariants: Variants = {
 export default function Right({ mobile }: RightProps) {
   const { navState, closeNav } = useNav();
 
-  // Prevent background scrolling cleanly when mobile nav is open
   useEffect(() => {
     if (mobile && navState.open) {
       document.body.style.overflow = "hidden";
@@ -41,16 +40,18 @@ export default function Right({ mobile }: RightProps) {
     };
   }, [navState.open, mobile]);
 
+  // Unified nav links array including both internal scroll links and external links
   const navLinks = [
-    { label: "About", to: "about" },
-    { label: "Skills", to: "skills" },
-    { label: "Projects", to: "projects" },
-    { label: "Contact", to: "contact" },
+    { label: "About", to: "about", isExternal: false },
+    { label: "Skills", to: "skills", isExternal: false },
+    { label: "Projects", to: "projects", isExternal: false },
+    { label: "Contact", to: "contact", isExternal: false },
+    {
+      label: "Resume",
+      url: "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit",
+      isExternal: true,
+    },
   ];
-
-  const handleResumeClick = () => {
-    closeNav();
-  };
 
   return (
     <>
@@ -62,34 +63,32 @@ export default function Right({ mobile }: RightProps) {
         {navLinks.map((link) => (
           <motion.li
             variants={itemVariants}
-            key={link.to}
+            key={link.label}
             className={styles.navbar_right_list_item}
           >
-            <Link
-              onClick={closeNav}
-              to={link.to}
-              href={link.to}
-              smooth
-              duration={600}
-              offset={50}
-            >
-              {link.label}
-            </Link>
+            {link.isExternal ? (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeNav}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                onClick={closeNav}
+                to={link.to!}
+                href={link.to}
+                smooth
+                duration={600}
+                offset={50}
+              >
+                {link.label}
+              </Link>
+            )}
           </motion.li>
         ))}
-        <motion.li
-          variants={itemVariants}
-          className={styles.navbar_right_list_item}
-        >
-          <a
-            href="https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleResumeClick}
-          >
-            Resume
-          </a>
-        </motion.li>
       </motion.ul>
 
       {mobile && (
