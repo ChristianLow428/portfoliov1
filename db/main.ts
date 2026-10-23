@@ -4,10 +4,9 @@ export const heroData = {
   name: "Christian",
   expertise: ["Software Engineer", "Web Developer"],
   about:
-    "I'm a developer focused on building clean, performant web experiences. I enjoy turning complex problems into solutions and am always exploring new technologies and gain new experiences.",
-    
+    "Currently a Software Engineer at Piikū Co. and currently a Computer Science student at the University of Hawaiʻi at Mānoa. I build full-stack web and mobile apps with React, React Native, Next.js, and TypeScript.",
   btnText: "My resume",
-  url: "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit"
+  url: "/Christian_Low_Resume.pdf",
 };
 
 export const aboutData = {
@@ -15,15 +14,48 @@ export const aboutData = {
   cards: [
     {
       title: "Past",
-      text: "My journey into programming started with curiosity about how websites work. What began as tinkering with HTML and CSS quickly grew into a deep interest in full-stack development and creating products people actually enjoy using.",
+      text: "At Purple Maia Foundation I helped build the Kilo Dashboard, mapping water quality and environmental data across Hawaiʻi with Leaflet.js and State GIS APIs, shaped by feedback from 50+ ʻĀina Stewards practitioners.",
     },
     {
       title: "Present",
-      text: "Today I focus on building modern web applications with React and Next.js. I'm constantly refining my skills in frontend architecture, UI design, and writing maintainable code that scales with real-world needs.",
+      text: "Currently a Software Engineer at Piikū Co., building Foodland's Maikai Rewards app with React Native and TypeScript, an app that reaches 92%+ of Hawaiʻi households, while studying Computer Science at UH Mānoa.",
     },
     {
       title: "Future",
-      text: "I'm excited to keep pushing into new areas of software — from performance optimization to creative interactive experiences. I'm open to opportunities where I can contribute meaningfully and keep growing.",
+      text: "I graduate in May 2027 and want to keep building products that serve real communities, from mobile apps to data-heavy web platforms. I'm open to roles where I can contribute meaningfully and keep growing.",
+    },
+  ],
+};
+
+export const experienceData = {
+  title: "Experience",
+  jobs: [
+    {
+      role: "Software Engineer",
+      company: "Piikū Co.",
+      location: "Honolulu, HI",
+      dates: "July 2026 – Present 2026",
+      technologies: ["React Native", "Expo", "TypeScript", "NativeWind", "Storybook", "GitHub Actions", "EAS"],
+      bullets: [
+        "Architected full-stack mobile components and REST API integrations for Foodland's Maikai Rewards app using React Native (Expo SDK 57), TypeScript, and NativeWind 4, reaching 92%+ of Hawaiʻi households.",
+        "Integrated a third-party loyalty API engine for secure customer account lookups, real-time points calculations, and digital card barcode generation, decoupled from WordPress/MiniOrange auth.",
+        "Established an isolated Storybook design system (Vite/Web & Native) to standardize reusable components and optimize Tailwind CSS styling.",
+        "Standardized code quality across a multi-repo ecosystem with ESLint flat configs, Prettier Tailwind sorting, cspell, and Husky pre-commit hooks.",
+        "Shipped features in agile sprints with cross-functional product and design teams, backed by GitHub Actions and EAS CI/CD automation.",
+      ],
+    },
+    {
+      role: "Software Developer",
+      company: "Purple Maia Foundation",
+      location: "Honolulu, HI",
+      dates: "May 2025 – August 2025",
+      technologies: ["Leaflet.js", "REST APIs", "GIS"],
+      bullets: [
+        "Contributed to the Kilo Dashboard, using Leaflet.js and Hawaiʻi State GIS REST APIs to map geographic, water quality, and environmental data across high-risk island zones.",
+        "Synthesized feedback from 50+ ʻĀina Stewards practitioners to design interactive mapping features for water quality, species tracking, and soil health monitoring.",
+        "Achieved 100% REST API integration reliability by standardizing geospatial data ingestion pipelines for field researchers, volunteers, and restoration teams.",
+        "Established code review protocols, technical API documentation, and standardized git workflows.",
+      ],
     },
   ],
 };
@@ -32,24 +64,41 @@ export const SkillsData = {
   title: "Skills",
   categories: [
     {
-      title: "Front End",
+      title: "Languages",
+      skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "C", "HTML/CSS"],
+    },
+    {
+      title: "Frameworks & Libraries",
       skills: [
-        "HTML",
-        "JavaScript",
-        "TypeScript",
         "React",
+        "React Native (Expo)",
         "Next.js",
+        "Node.js",
+        "NativeWind",
         "Tailwind CSS",
-        "Framer Motion",
+        "Prisma",
+        "Leaflet.js",
+        "WebSockets",
       ],
     },
     {
-      title: "Styling & Design",
-      skills: ["CSS", "SCSS", "Responsive Design", "UI/UX", "Figma"],
+      title: "Developer Tools & Infrastructure",
+      skills: [
+        "GitHub Actions",
+        "EAS",
+        "Storybook",
+        "Docker",
+        "PostgreSQL",
+        "Supabase",
+        "Render",
+        "Vercel",
+        "REST APIs",
+        "Husky",
+      ],
     },
     {
-      title: "Tools & Other",
-      skills: ["Git", "Node.js", "Vercel", "Firebase", "Supabase", "Discord API"],
+      title: "Testing & Code Quality",
+      skills: ["Jest", "ESLint", "Prettier", "Postman"],
     },
   ],
 };
@@ -73,7 +122,7 @@ export const contactData = {
   links: [
     {
       label: "Email",
-      url: "smallleft14@gmail.com",
+      url: "mailto:christianlow428@gmail.com",
     },
     {
       label: "GitHub",
@@ -85,7 +134,7 @@ export const contactData = {
     },
     {
       label: "Resume",
-      url: "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit",
+      url: "/Christian_Low_Resume.pdf",
     },
   ],
 };
@@ -94,11 +143,11 @@ export const ProjectsData = {
   title: "Projects",
   Projects: [
     {
-      name: "808Ultimatewesbite",
+      name: "808Ultimate",
       image: "/images/808Ultimate.png",
-      technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Start.gg API"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Start.gg GraphQL API"],
       description:
-        "Developed a high-performance regional tracking platform featuring live start.gg tournament integrations and an internal data-caching API. Finding Top Hawaii Super Smash Bros Ultimate Players, along with Tournaments happening around the State.",
+        "A real-time tournament tracking platform that centralizes Hawaiʻi's Super Smash Bros. Ultimate scene. Server-side API routes pull from the Start.gg GraphQL API to deliver live bracket standings, player stats, and interactive Power Rankings, with an in-memory caching layer and revalidation strategy that eliminates rate-limiting issues.",
       demoUrl: "https://808ultimatewebsite-w1az.vercel.app/",
       codeUrl: "https://github.com/ChristianLow428/808ultimatewebsite",
     },
@@ -112,11 +161,11 @@ export const ProjectsData = {
       codeUrl: "https://github.com/ChristianLow428/Smashmateclone",
     },
     {
-      name: "Manoa Compass",
+      name: "Mānoa Compass",
       image: "/images/ManoaCompass.png",
-      technologies: ["JavaScript", "REST APIs", "CSS"],
+      technologies: ["Next.js", "Prisma", "PostgreSQL", "Gemini API", "NextAuth.js", "Vercel"],
       description:
-        "An MVP designed to help students navigate the University of Hawaii at Manoa campus clubs and give information about them powered by Gemini API ",
+        "An AI-driven event discovery hub that matches 100+ UH Mānoa campus events to student interests. Uses the Gemini API to parse event descriptions, automated web scrapers with an admin moderation dashboard, and a server-side caching layer that cut page loads from 30s to sub-second.",
       demoUrl: "https://manoa-compass-code.vercel.app/",
       codeUrl: "https://manoa-compass.github.io/",
     },

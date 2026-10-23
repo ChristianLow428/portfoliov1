@@ -1,7 +1,7 @@
 "use client";
 
 import { useNav } from "@/context/NavContext";
-import { contactData } from "@/db/main";
+import { contactData, heroData } from "@/db/main";
 import { Icon } from "@iconify/react";
 import { type Variants, motion } from "framer-motion";
 import { useEffect } from "react";
@@ -42,13 +42,13 @@ export default function Right({ mobile }: RightProps) {
 
   const navLinks = [
     { label: "About", to: "about", isExternal: false },
+    { label: "Experience", to: "experience", isExternal: false },
     { label: "Skills", to: "skills", isExternal: false },
     { label: "Projects", to: "projects", isExternal: false },
     { label: "Contact", to: "contact", isExternal: false },
   ];
 
-  const resumeUrl =
-    "https://docs.google.com/document/d/1D2LHU3mNBmzIgbGSeYadmPyZNLVY2X3T/edit";
+  const resumeUrl = heroData.url;
 
   const handleExternalClick = (url: string) => {
     // Open tab immediately to preserve user-initiated browser gesture
