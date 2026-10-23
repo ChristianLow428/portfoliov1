@@ -6,7 +6,7 @@ export const heroData = {
   about:
     "Currently a Software Engineer at Piikū Co. and currently a Computer Science student at the University of Hawaiʻi at Mānoa. I build full-stack web and mobile apps with React, React Native, Next.js, and TypeScript.",
   btnText: "My resume",
-  url: "/Christian_Low_Resume.pdf",
+  url: "/Main_Resume.pdf",
 };
 
 export const aboutData = {
@@ -134,7 +134,7 @@ export const contactData = {
     },
     {
       label: "Resume",
-      url: "/Christian_Low_Resume.pdf",
+      url: "/Main_Resume.pdf",
     },
   ],
 };
